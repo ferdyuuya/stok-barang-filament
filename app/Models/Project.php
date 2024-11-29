@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    protected $fillable = [
+        'name',
+        'description',
+        'project_code',
+    ];
+
     public function items()
     {
         return $this->hasMany(Item::class);
@@ -16,5 +22,5 @@ class Project extends Model
         return $this->hasMany(StockLog::class);
     }
 
-    
+
 }

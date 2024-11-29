@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->integer('quantity');
+            // $table->foreignId('project_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
